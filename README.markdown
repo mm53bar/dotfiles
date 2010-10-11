@@ -11,5 +11,6 @@ To set these up, just copy and paste the following:
     ln -fs .dot_files/.autotest
     ln -fs .dot_files/.gemrc
     ln -fs .dot_files/.gitconfig
+    ln -fs .got_files/.irbrc
     ln -fs .dot_files/.profile
 
