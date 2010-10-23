@@ -7,12 +7,18 @@ This is where I put my bash settings for OSX.
 To set these up, just copy and paste the following:
 
     cd ~
-    git clone git://github.com/mm53bar/dot-files.git .dot_files
-    ln -fs .dot_files/.autotest
-    ln -fs .dot_files/.gemrc
-    ln -fs .dot_files/.gitconfig
-    ln -fs .got_files/.irbrc
-    ln -fs .dot_files/.profile
+    git clone git://github.com/mm53bar/dotfiles.git .dotfiles
+    ln -fs .dotfiles/.autotest
+    ln -fs .dotfiles/.gemrc
+    ln -fs .dotfiles/.gitconfig
+    ln -fs .gotfiles/.irbrc
+    ln -fs .dotfiles/.profile
+
+## Sources
+
+The git autocompletion script is directly from git itself.  You can grab it like this:
+
+    curl http://github.com/git/git/raw/master/contrib/completion/git-completion.bash -O
 
 ## Credits
 
