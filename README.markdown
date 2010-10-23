@@ -1,4 +1,4 @@
-#dot-files
+#dotfiles
 
 This is where I put my bash settings for OSX.
 
