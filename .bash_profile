@@ -1,7 +1,7 @@
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-export JAVA_HOME=/usr
+export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
 export EC2_HOME=~/.ec2/ec2-api-tools-1.3-57419
 export EC2_PRIVATE_KEY=~/.ec2/pk-43GG33ME2RK2OCHUC7ZRPDDMJEF3F4B3.pem
 export EC2_CERT=~/.ec2/cert-43GG33ME2RK2OCHUC7ZRPDDMJEF3F4B3.pem
