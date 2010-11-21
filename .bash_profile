@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$HOME/bin:$PATH"
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
