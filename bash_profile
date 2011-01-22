@@ -6,7 +6,7 @@ export EC2_PRIVATE_KEY=~/.ec2/pk-43GG33ME2RK2OCHUC7ZRPDDMJEF3F4B3.pem
 export EC2_CERT=~/.ec2/cert-43GG33ME2RK2OCHUC7ZRPDDMJEF3F4B3.pem
 export PATH=$PATH:$EC2_HOME/bin
 
-source "$HOME/.dotfiles/.git-completion.bash"
+source "$HOME/.dotfiles/git-completion.bash"
 
 # http://henrik.nyh.se/2008/12/git-dirty-prompt
 # http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/
