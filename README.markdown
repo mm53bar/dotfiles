@@ -8,12 +8,13 @@ To set these up, just copy and paste the following:
 
     cd ~
     git clone git://github.com/mm53bar/dotfiles.git .dotfiles
-    ln -fs .dotfiles/.autotest
-    ln -fs .dotfiles/.bash_profile
-    ln -fs .dotfiles/.chitrc
-    ln -fs .dotfiles/.gemrc
-    ln -fs .dotfiles/.gitconfig
-    ln -fs .gotfiles/.irbrc
+    ln -fs .dotfiles/autotest .autotest
+    ln -fs .dotfiles/bash_profile .bash_profile
+    ln -fs .dotfiles/chitrc .chitrc
+    ln -fs .dotfiles/gemrc .gemrc
+    ln -fs .dotfiles/gitconfig .gitconfig
+    ln -fs .dotfiles/irbrc .irbrc
+    ln -fs .dotfiles/rvmrc .rvmrc
 
 ## Sources
 
