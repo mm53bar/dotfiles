@@ -13,6 +13,7 @@ To set these up, just copy and paste the following:
     ln -fs .dotfiles/chitrc .chitrc
     ln -fs .dotfiles/gemrc .gemrc
     ln -fs .dotfiles/gitconfig .gitconfig
+    ln -fs .dotfiles/inputrc .inputrc
     ln -fs .dotfiles/irbrc .irbrc
     ln -fs .dotfiles/rvmrc .rvmrc
 
