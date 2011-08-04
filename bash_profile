@@ -25,5 +25,3 @@ export PS1='\u@\h:\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 export DYLD_LIBRARY_PATH=/Users/mike/oracle/instant_client:/Users/mike/oracle/instant_client
-export DYLD_LIBRARY_PATH=/Users/mike/oracle/instant_client:/Users/mike/oracle/instant_client
-export DYLD_LIBRARY_PATH=/Users/mike/oracle/instant_client:/Users/mike/oracle/instant_client
