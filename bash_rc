@@ -5,6 +5,4 @@ done
 
 export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
-export PATH=$PATH:$EC2_HOME/bin
-
 export DYLD_LIBRARY_PATH=/Users/mike/oracle/instant_client:/Users/mike/oracle/instant_client
