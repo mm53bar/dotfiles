@@ -2,8 +2,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
 
 export PATH=$PATH:$EC2_HOME/bin
 
-source "$HOME/.dotfiles/git-completion.bash"
-
 # http://henrik.nyh.se/2008/12/git-dirty-prompt
 # http://www.simplisticcomplexity.com/2008/03/13/show-your-git-branch-name-in-your-prompt/
 #   username@Machine ~/dev/dir[master]$   # clean working directory
