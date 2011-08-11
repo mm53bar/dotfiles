@@ -3,6 +3,4 @@ for file in ${files}; do
 	source ${file}
 done
 
-export PATH="/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH"
-
 export DYLD_LIBRARY_PATH=/Users/mike/oracle/instant_client:/Users/mike/oracle/instant_client
