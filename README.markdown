@@ -8,15 +8,9 @@ To set these up, just copy and paste the following:
 
     cd ~
     git clone git://github.com/mm53bar/dotfiles.git .dotfiles
-    ln -fs .dotfiles/autotest .autotest
-    ln -fs .dotfiles/bash_rc .bash_rc
-    ln -fs .dotfiles/bash_profile .bash_profile
-    ln -fs .dotfiles/chitrc .chitrc
-    ln -fs .dotfiles/gemrc .gemrc
-    ln -fs .dotfiles/gitconfig .gitconfig
-    ln -fs .dotfiles/inputrc .inputrc
-    ln -fs .dotfiles/irbrc .irbrc
-    ln -fs .dotfiles/rvmrc .rvmrc
+    chmod u+x .dotfiles/install.sh
+    .dotfiles/install.sh
+    source .bash_profile
 
 ## Sources
 
