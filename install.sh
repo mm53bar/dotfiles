@@ -11,5 +11,4 @@ ln -fs ~/.dotfiles/rvmrc ~/.rvmrc
 [ ! -h ~/.bash_profile.d ] && ln -fs ~/.dotfiles/bash_profile.d/ ~/.bash_profile.d
 [ ! -e ~/.bash_profile.d/private/ ] && mkdir ~/.bash_profile.d/private/
 
-source ~/.bash_profile
 
