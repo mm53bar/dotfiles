@@ -3,3 +3,5 @@
 	email = mike@sideline.ca
 [core]
 	autocrlf = input
+[push]
+	default = tracking
