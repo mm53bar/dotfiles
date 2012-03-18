@@ -1,1 +1,5 @@
 bash_profile.d/private
+vendor/bundle
+.DS_Store
+
+
