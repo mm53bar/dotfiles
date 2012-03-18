@@ -1,7 +1,14 @@
 [user]
 	name = Michael McClenaghan
 	email = mike@sideline.ca
+	affiliation = AMA
 [core]
 	autocrlf = input
 [push]
 	default = tracking
+[alias]
+    stage = !sh -c '[[ -z "$@" ]] && git add -u || git add "$@" && git add -u "$@" ' -
+    unstage = reset HEAD --
+    rewind = ![[ -z "$@" ]] && git reset --hard HEAD || git checkout HEAD
+    switch = checkout
+    
