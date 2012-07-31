@@ -1,7 +1,3 @@
-[user]
-	name = Michael McClenaghan
-	email = mike@sideline.ca
-	affiliation = AMA
 [core]
 	autocrlf = input
 [push]
