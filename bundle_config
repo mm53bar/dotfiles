@@ -1,0 +1,4 @@
+---
+BUNDLE_BIN: bin
+BUNDLE_WITHOUT: production:oracle
+BUNDLE_PATH: vendor/bundle
