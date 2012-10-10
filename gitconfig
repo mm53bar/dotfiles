@@ -1,10 +1,14 @@
 [core]
-	autocrlf = input
+  autocrlf = input
 [push]
-	default = tracking
+  default = tracking
 [alias]
-    stage = !sh -c '[[ -z "$@" ]] && git add -u || git add "$@" && git add -u "$@" ' -
-    unstage = reset HEAD --
-    rewind = ![[ -z "$@" ]] && git reset --hard HEAD || git checkout HEAD
-    switch = checkout
-    
+  stage = !sh -c '[[ -z "$@" ]] && git add -u || git add "$@" && git add -u "$@" ' -
+  unstage = reset HEAD --
+  rewind = ![[ -z "$@" ]] && git reset --hard HEAD || git checkout HEAD
+  switch = checkout
+  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  standup = log --since yesterday --oneline --author $USER    
+[user]
+  name = Mike McClenaghan
+  email = mike@sideline.ca
