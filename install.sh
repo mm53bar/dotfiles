@@ -7,6 +7,7 @@ ln -fs ~/.dotfiles/gitconfig ~/.gitconfig
 ln -fs ~/.dotfiles/inputrc ~/.inputrc
 ln -fs ~/.dotfiles/irbrc ~/.irbrc
 ln -fs ~/.dotfiles/rvmrc ~/.rvmrc
+ln -fs ~/.dotfiles/gitignore ~/.gitignore
 
 mkdir -p ~/.bundle
 ln -fs ~/.dotfiles/bundle_config ~/.bundle/config
