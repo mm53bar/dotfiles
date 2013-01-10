@@ -9,15 +9,8 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ [\1$(parse_git_dirty)]/"
 }
-function rbenv_ps1() {
-  if [ -d ~/.rbenv ]; then
-    local rbenv_ps1="$(rbenv version-name)"
-    if [ -n "${rbenv_ps1}" ]; then
-      if [ "system" != "${rbenv_ps1}" ]; then
-        printf "${1:-%s}" "$rbenv_ps1"
-      fi
-    fi
-  fi
+function ruby_ps1() {
+  printf "$(ruby -v | awk '{ print $2; }')"
 }
-# export PS1='\u@\h:\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
-export PS1='$(rbenv_ps1):\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '
+
+export PS1='$(ruby_ps1):\[\033[1;33m\]\w\[\033[0m\]$(parse_git_branch)$ '

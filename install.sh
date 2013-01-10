@@ -8,6 +8,7 @@ ln -fs ~/.dotfiles/inputrc ~/.inputrc
 ln -fs ~/.dotfiles/irbrc ~/.irbrc
 ln -fs ~/.dotfiles/rvmrc ~/.rvmrc
 ln -fs ~/.dotfiles/gitignore ~/.gitignore
+ln -fs ~/.dotfiles/ruby-version ~/.ruby-version
 
 mkdir -p ~/.bundle
 ln -fs ~/.dotfiles/bundle_config ~/.bundle/config
