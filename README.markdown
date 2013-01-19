@@ -12,6 +12,10 @@ To set these up, just copy and paste the following:
     .dotfiles/install.sh
     source .bash_profile
 
+## Extra Config
+
+Add your git info (email & name) to ~/.gitconfig.local.
+
 ## Sources
 
 The git autocompletion script is directly from git itself.  You can grab it like this:
