@@ -10,6 +10,5 @@
   switch = checkout
   pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
   standup = log --since yesterday --oneline --author $USER    
-[user]
-  name = Mike McClenaghan
-  email = mike@sideline.ca
+[include]
+  path = .gitconfig.local
