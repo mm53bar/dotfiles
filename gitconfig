@@ -12,3 +12,5 @@
   standup = log --since yesterday --oneline --author $USER    
 [include]
   path = .gitconfig.local
+[commit]
+  template = ~/.gitmessage

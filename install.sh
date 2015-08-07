@@ -6,6 +6,7 @@ ln -fs ~/.dotfiles/bash_profile ~/.bash_profile
 ln -fs ~/.dotfiles/chitrc ~/.chitrc
 ln -fs ~/.dotfiles/gemrc ~/.gemrc
 ln -fs ~/.dotfiles/gitconfig ~/.gitconfig
+ln -fs ~/.dotfiles/gitmessage ~/.gitmessage
 ln -fs ~/.dotfiles/inputrc ~/.inputrc
 ln -fs ~/.dotfiles/irbrc ~/.irbrc
 ln -fs ~/.dotfiles/rvmrc ~/.rvmrc
