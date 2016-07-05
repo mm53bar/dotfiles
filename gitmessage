@@ -1,7 +1,10 @@
+# Summarize changes in around 50 characters or less
 
-# Summarize changes in around 50 characters or less. Use imperative
-# mood i.e. "spoken as a command". "Add something", "Update
-# something", "Refactor something", etc.
+# Use imperative mood i.e. "spoken as a command". "Add something", 
+# "Update something", "Refactor something", etc. A properly formed 
+# git commit subject line should always be able to complete the 
+# following sentence: "If applied, this commit will <your subject 
+# line here>"
 #
 # More detailed explanatory text, if necessary (wrapped at 72 chars).
 # Explain the problem that this commit is solving. Focus on why you
@@ -22,3 +25,5 @@
 #
 # Resolves: #123
 # See also: #456, #789
+#
+# Reference: http://chris.beams.io/posts/git-commit/
