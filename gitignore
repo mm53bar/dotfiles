@@ -1,1 +1,3 @@
-# Add global gitignores to this file
+# Mac OS X hidden files
+.DS_Store
+
