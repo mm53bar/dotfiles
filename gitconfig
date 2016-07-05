@@ -2,7 +2,7 @@
   autocrlf = input
   excludesfile = ~/.gitignore
 [push]
-  default = tracking
+	default = simple
 [alias]
   stage = !sh -c '[[ -z "$@" ]] && git add -u || git add "$@" && git add -u "$@" ' -
   unstage = reset HEAD --
