@@ -4,13 +4,20 @@
 [push]
 	default = simple
 [alias]
-  stage = !sh -c '[[ -z "$@" ]] && git add -u || git add "$@" && git add -u "$@" ' -
-  unstage = reset HEAD --
-  rewind = ![[ -z "$@" ]] && git reset --hard HEAD || git checkout HEAD
-  switch = checkout
-  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  unstage = reset -q HEAD --
+  discard = checkout --
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  uncommit = reset --mixed HEAD~
+  undo = reset --mixed HEAD~
+  tags = tag
+  branches = branch -a
+  stashes = stash list
+  remotes = remote -v
+  unstash = stash pop
+  amend = commit --amend
+  wip = !git add -A && git commit -m 'WIP'
   standup = log --since yesterday --oneline --author $USER    
 [include]
   path = .gitconfig.local
 [commit]
-  template = ~/.gitmessage
+	template = /Users/mike/.gitmessage
