@@ -1,17 +1,12 @@
 echo "Installing dotfiles"
 
-ln -fs ~/.dotfiles/autotest ~/.autotest
-ln -fs ~/.dotfiles/bashrc ~/.bashrc
-ln -fs ~/.dotfiles/bash_profile ~/.bash_profile
-ln -fs ~/.dotfiles/chitrc ~/.chitrc
-ln -fs ~/.dotfiles/gemrc ~/.gemrc
-ln -fs ~/.dotfiles/gitconfig ~/.gitconfig
-ln -fs ~/.dotfiles/gitmessage ~/.gitmessage
-ln -fs ~/.dotfiles/inputrc ~/.inputrc
-ln -fs ~/.dotfiles/irbrc ~/.irbrc
-ln -fs ~/.dotfiles/rvmrc ~/.rvmrc
-ln -fs ~/.dotfiles/gitignore ~/.gitignore
-ln -fs ~/.dotfiles/ruby-version ~/.ruby-version
+for symlink in autotest bashrc bash_profile chitrc gemrc gitconfig gitmessage \
+	       inputrc irbrc rvmrc gitignore ruby-version
+do
+  echo " symlink: ~/.$symlink"
+  rm ~/.$symlink
+  ln -s $PWD/$symlink ~/.$symlink
+done
 
 echo "Installing .bundle/config"
 
