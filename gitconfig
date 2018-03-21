@@ -1,6 +1,7 @@
 [core]
   autocrlf = input
   excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
 [push]
 	default = simple
 [alias]
@@ -15,7 +16,7 @@
   remotes = remote -v
   unstash = stash pop
   amend = commit --amend
-  wip = !git add -A && git commit -m 'WIP'
+  wip = !git add -A && git commit -m 'WIP' && echo 'Type `git undo` to undo this wip commit.'
   standup = log --since yesterday --oneline --author $USER    
 [include]
   path = .gitconfig.local
