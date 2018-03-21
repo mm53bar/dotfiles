@@ -13,6 +13,11 @@ echo "Installing .bundle/config"
 mkdir -p ~/.bundle
 ln -fs ~/.dotfiles/bundle_config ~/.bundle/config
 
+echo "Installing Brewfile"
+
+rm ~/Brewfile
+ln -s $PWD/Brewfile ~/Brewfile
+
 echo "Installing .bash_profile.d"
 
 [ ! -h ~/.bash_profile.d ] && ln -fs ~/.dotfiles/bash_profile.d/ ~/.bash_profile.d
