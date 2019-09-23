@@ -1,3 +1,20 @@
+realpath() {
+  [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+safe_link(){
+  local src="$1"
+  local dest="$HOME/`basename $src`"
+  [ ! -e "$dest" ] && ln -sf "$src" "$dest"
+}
+
+SCRIPT_PATH=`realpath $0`
+DOTFILES=`dirname $SCRIPT_PATH`
+
+echo "Install bin/ directory"
+
+safe_link "$DOTFILES/bin"
+
 echo "Installing dotfiles"
 
 for symlink in autotest bashrc bash_profile chitrc gemrc gitconfig gitmessage \
