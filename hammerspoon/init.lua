@@ -1,6 +1,7 @@
-local hyper = {"ctrl", "alt", "cmd"}
+local hyper = {"ctrl", "alt", "cmd", "shift"}
 
 hs.loadSpoon("MiroWindowsManager")
+hs.loadSpoon("TextClipboardHistory")
 
 hs.window.animationDuration = 0.3
 spoon.MiroWindowsManager:bindHotkeys({
@@ -10,6 +11,11 @@ spoon.MiroWindowsManager:bindHotkeys({
   left = {hyper, "left"},
   fullscreen = {hyper, "f"}
 })
+spoon.TextClipboardHistory:bindHotkeys({
+  toggle_clipboard = {hyper, "v"} 
+})
+
+spoon.TextClipboardHistory:start()
 
 -- https://github.com/miromannino/miro-windows-manager
 
@@ -21,10 +27,16 @@ function ssidChangedCallback()
     end
     if SSID ~= "backson" then
       hs.audiodevice.defaultOutputDevice():setMuted(true)
-      hs.caffeinate.set("displayIdle", false, true)
+    else
+      hs.audiodevice.defaultOutputDevice():setMuted(false)
     end
-    wifiMenu:setTitle("(" .. SSID .. ")" )
+
+    -- wifiMenu:setTitle("(" .. SSID .. ")" )
 end
 wifiWatcher = hs.wifi.watcher.new(ssidChangedCallback)
 wifiWatcher:start()
 ssidChangedCallback()
+
+hs.hotkey.bind(hyper, "l", function()
+  hs.caffeinate.lockScreen()
+end)
