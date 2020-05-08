@@ -40,3 +40,7 @@ ssidChangedCallback()
 hs.hotkey.bind(hyper, "l", function()
   hs.caffeinate.lockScreen()
 end)
+
+hs.hotkey.bind(hyper, "j", function()
+  hs.execute("journal", true)
+end)
