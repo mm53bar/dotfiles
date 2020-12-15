@@ -35,6 +35,11 @@ echo "Installing Brewfile"
 rm ~/Brewfile
 ln -s $PWD/Brewfile ~/Brewfile
 
+echo "Installing other config files"
+
+mkdir ~/.config/youtube-dl
+ln -fs $PWD/youtube-dl ~/.config/youtube-dl/config
+
 echo "Installing .bash_profile.d"
 
 [ ! -h ~/.bash_profile.d ] && ln -fs ~/.dotfiles/bash_profile.d/ ~/.bash_profile.d
