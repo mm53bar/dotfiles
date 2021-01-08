@@ -3,12 +3,38 @@
 # This is the default configuration file, change it as you like it
 # You can refer to the official documentation:
 # https://espanso.org/docs/
-
+enable_passive: true
+passive_key: CTRL
 global_vars:
-   - name: today
-     type: date
-     params:
-       format: "%Y-%m-%d"
+  - name: today
+    type: date
+    params:
+      format: "%Y-%m-%d"
+
+  - name: long_today
+    type: date
+    params:
+      format: "%A, %b %d, %Y"
+
+  - name: last_year_today
+    type: shell
+    params:
+      cmd: "date -v-1y +%Y-%m-%d"
+
+  - name: weather
+    type: shell
+    params:
+      cmd: "$HOME/bin/weather"
+
+  - name: yesterday
+    type: shell
+    params:
+      cmd: "date -v-1d +%Y-%m-%d"
+
+  - name: week
+    type: date
+    params:
+      format: "%Y-W%W"
 
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
@@ -21,25 +47,27 @@ matches:
   - trigger: ":today"
     replace: "{{today}}"
 
-  - trigger: ":date"
-    replace: "{{today}}"
-
   - trigger: ":yesterday"
     replace: "{{yesterday}}"
-    vars:
-      - name: yesterday
-        type: shell
-        params:
-          cmd: "date -v-1d +%Y-%m-%d"
 
   # Shell commands
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo Hello from your shell"
+  - trigger: ":weather"
+    replace: "{{weather}}"
+
+  - trigger: ":daily"
+    replace: |
+      # {{long_today}}
+      [[{{last_year_today}}]] | [[{{week}}]]
+
+      ## Weather
+      {{weather}}
+
+      ## TODO
+      - [ ] 🗓 Check calendar for scheduled events
+      📥 Check backlinks for any scheduled tasks
+
+      ## Daily Notes
+      -
 
   # Note templates
   - trigger: ":article"
