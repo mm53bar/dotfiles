@@ -25,6 +25,10 @@ do
   ln -s $PWD/$symlink ~/.$symlink
 done
 
+echo "installing Espanso config"
+
+ln -fs "$PWD/espanso" "$HOME/Library/Preferences/espanso"
+
 echo "Installing .bundle/config"
 
 mkdir -p ~/.bundle

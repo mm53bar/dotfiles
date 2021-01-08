@@ -1,0 +1,51 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+global_vars:
+   - name: today
+     type: date
+     params:
+       format: "%Y-%m-%d"
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # Dates
+  - trigger: ":today"
+    replace: "{{today}}"
+
+  - trigger: ":date"
+    replace: "{{today}}"
+
+  - trigger: ":yesterday"
+    replace: "{{yesterday}}"
+    vars:
+      - name: yesterday
+        type: shell
+        params:
+          cmd: "date -v-1d +%Y-%m-%d"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
+
+  # Note templates
+  - trigger: ":article"
+    replace: |
+      - Source: url
+      Author: possible in wikilinks if useful to grow the [[CRM]]
+      Read on: [[{{today}}]]
+      Instapaper/Pocket URL:
+      Keywords: other related links like [[bookmarks]]
