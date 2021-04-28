@@ -17,7 +17,9 @@
   unstash = stash pop
   amend = commit --amend
   wip = !git add -A && git commit -m 'WIP' && echo 'Type `git undo` to undo this wip commit.'
+  unwip = reset --mixed HEAD~
   standup = log --since yesterday --oneline --author $USER    
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 [include]
   path = .gitconfig.local
 [commit]
