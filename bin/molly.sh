@@ -16,7 +16,7 @@
 
 # Get rid of old download files
 find $HOME/Downloads/*.dmg -mtime +1 -exec mv {} $HOME/.Trash/ \;
-find $HOME/Downloads/* -mtime +7 -exec mv {} $HOME/.Trash/ \;
+find $HOME/Downloads -depth 1 -mtime +7 -exec mv {} $HOME/.Trash/ \;
 
 # Empty Trash once a month
 find $HOME/.Trash/* -mtime +30 -exec rm -rf {} \;
