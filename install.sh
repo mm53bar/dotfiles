@@ -41,8 +41,13 @@ ln -s $PWD/Brewfile ~/Brewfile
 
 echo "Installing other config files"
 
+mkdir -p ~/.config
+
 mkdir ~/.config/youtube-dl
 ln -fs $PWD/youtube-dl ~/.config/youtube-dl/config
+
+mkdir ~/.config/karabiner
+ln -fs $PWD/karabiner.json ~/.config/karabiner/karabiner.json
 
 echo "Installing .bash_profile.d"
 
