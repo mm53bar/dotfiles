@@ -5,6 +5,7 @@
 # https://espanso.org/docs/
 enable_passive: true
 passive_key: CTRL
+secure_input_notification: false
 global_vars:
   - name: today
     type: date
