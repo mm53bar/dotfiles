@@ -27,7 +27,8 @@ done
 
 echo "installing Espanso config"
 
-ln -fs "$PWD/espanso" "$HOME/Library/Preferences/espanso"
+[[ -d $HOME/Library/Preferences/espanso ]] && rm -rf $HOME/Library/Preferences/espanso
+ln -fs $PWD/espanso $HOME/Library/Preferences/espanso
 
 echo "Installing .bundle/config"
 
