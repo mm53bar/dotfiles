@@ -20,3 +20,6 @@ find $HOME/Downloads -depth 1 -mtime +7 -exec mv {} $HOME/.Trash/ \;
 
 # Empty Trash once a month
 find $HOME/.Trash/* -mtime +30 -exec rm -rf {} \;
+
+# Decrypt Vertical City paystubs
+for file in $HOME/Downloads/MAILSTUB*.pdf ; do qpdf --decrypt --password=$VC_PAYSTUB_PASSWORD "$file" "$HOME/SynologyDrive/VerticalCity/Paystubs/$(basename "$file")" ; done

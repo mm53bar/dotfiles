@@ -27,6 +27,11 @@ global_vars:
     params:
       cmd: "$HOME/bin/weather"
 
+  - name: recent_notes
+    type: shell
+    params:
+      cmd: "$HOME/bin/recent_notes"
+
   - name: yesterday
     type: shell
     params:
@@ -55,13 +60,19 @@ matches:
   - trigger: ":weather"
     replace: "{{weather}}"
 
+  - trigger: ":recent"
+    replace: "{{recent_notes}}"
+
   - trigger: ":daily"
     replace: |
       # {{long_today}}
       [[{{last_year_today}}]] | [[{{week}}]]
 
       ## Weather
-      {{weather}}
+      - {{weather}}
+
+      ## Recent
+      - {{recent_notes}}
 
       ## TODO
       - [ ] 🗓 Check calendar for scheduled events

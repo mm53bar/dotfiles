@@ -1,1 +1,16 @@
-/Users/mike/src/obsidian_utils/recent.rb
+#!/usr/bin/env ruby
+
+notes_path = "#{ENV['HOME']}/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes/"
+recent_filepath = notes_path + 'RECENT.md'
+
+#files = `find "#{notes_path}"/* -mtime -7` 
+files = Dir.glob("#{notes_path}**").select {|f| File.mtime(f) > (Time.now - (7*24*60*60))}
+#recent_notes = files.split("\n").map{|filepath| File.basename(filepath).chomp('.md') unless filepath.match(/RECENT|TODO|WEATHER|_TEMPLATES|_ATTACHMENTS/)}.compact
+recent_notes = files.map{|filepath| File.basename(filepath).chomp('.md') unless filepath.match(/RECENT|TODO|WEATHER|_TEMPLATES|_ATTACHMENTS/)}.compact
+
+
+File.open(recent_filepath, 'w') do |file|
+  recent_notes.each do |filename|
+    file.write "- [[#{filename}]]\n"
+  end
+end
