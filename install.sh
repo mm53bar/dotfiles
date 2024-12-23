@@ -18,17 +18,13 @@ safe_link "$DOTFILES/bin"
 echo "Installing dotfiles"
 
 for symlink in autotest bashrc bash_profile chitrc gemrc gitconfig gitmessage \
-	       inputrc irbrc rvmrc gitignore ruby-version hammerspoon
+	       inputrc irbrc rvmrc gitignore ruby-version
 do
   echo " symlink: ~/.$symlink"
   rm -rf ~/.$symlink
   ln -s $PWD/$symlink ~/.$symlink
 done
 
-echo "installing Espanso config"
-
-[[ -d $HOME/Library/Preferences/espanso ]] && rm -rf $HOME/Library/Preferences/espanso
-ln -fs $PWD/espanso $HOME/Library/Preferences
 
 echo "Installing .bundle/config"
 
@@ -47,8 +43,6 @@ mkdir -p ~/.config
 mkdir ~/.config/youtube-dl
 ln -fs $PWD/youtube-dl ~/.config/youtube-dl/config
 
-mkdir ~/.config/karabiner
-ln -fs $PWD/karabiner.json ~/.config/karabiner/karabiner.json
 
 echo "Installing .bash_profile.d"
 
@@ -62,4 +56,3 @@ echo "Initializing .bash_profile.d/private and .gitconfig.local"
 echo ""
 
 echo "Good work. We're ready to rock. Be sure to update ~/.gitconfig.local"
-
