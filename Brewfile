@@ -4,14 +4,14 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "federico-terzi/espanso"
 # Ruby environment tool
 brew "chruby"
 # Client interface to the Amazon EC2 web service
 brew "ec2-api-tools"
-brew "espanso"
 # Distributed revision control system
 brew "git"
+# Organize software neatly under a single directory tree
+brew "stow"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Install various Ruby versions and implementations
@@ -28,8 +28,6 @@ cask "dropbox"
 cask "font-fira-code"
 cask "google-chrome"
 cask "google-drive-file-stream"
-cask "hammerspoon"
-cask "karabiner-elements"
 cask "licecap"
 cask "obsidian"
 cask "qlimagesize"
