@@ -18,7 +18,7 @@ safe_link "$DOTFILES/bin"
 echo "Installing dotfiles"
 
 for symlink in autotest bashrc bash_profile chitrc gemrc gitconfig gitmessage \
-	       inputrc irbrc rvmrc gitignore ruby-version
+	       inputrc irbrc gitignore ruby-version
 do
   echo " symlink: ~/.$symlink"
   rm -rf ~/.$symlink
