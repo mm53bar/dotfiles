@@ -20,9 +20,21 @@
   unwip = reset --mixed HEAD~
   standup = log --since yesterday --oneline --author $USER    
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  search = !git switch $(git branch | fzf)
+  recent = !git switch $(git branch --sort=-committerdate | fzf)
 [include]
   path = .gitconfig.personal
 [includeIf "gitdir:~/src/work/"]
   path = .gitconfig.work
 [commit]
 	template = /Users/mike/.gitmessage
+[user]
+	name = Mike McClenaghan
+	email = mike@sideline.ca
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
