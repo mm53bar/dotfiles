@@ -1,0 +1,9 @@
+--target=~
+--dotfiles
+--ignore=after-stow.sh
+--ignore=.DS_Store
+--ignore=.git
+--ignore=.gitignore
+--ignore=README.markdown
+--ignore=.stowrc
+--ignore=\.example$

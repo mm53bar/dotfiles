@@ -1,28 +1,55 @@
-#dotfiles
+# dotfiles
 
-This is where I put my bash settings for OSX.
+This is where I keep my shell and development environment configuration for macOS.
 
 ## Installation
 
-To set these up, just copy and paste the following:
+Clone the repo:
 
-    cd ~
-    git clone git://github.com/mm53bar/dotfiles.git .dotfiles
-    chmod u+x .dotfiles/install.sh
-    .dotfiles/install.sh
-    source .bash_profile
+```shell
+cd ~
+git clone git://github.com/mm53bar/dotfiles.git .dotfiles
+```
 
-## Extra Config
+If you don't have Homebrew installed, install it first:
 
-Add your git info (email & name) to ~/.gitconfig.local.
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-## Sources
+You can install all packages listed in your Brewfile with:
 
-The git autocompletion script is directly from git itself.  You can grab it like this:
+```sh
+brew bundle
+```
 
-    curl http://github.com/git/git/raw/master/contrib/completion/git-completion.bash -O
+To install all your dotfiles with [Stow](https://www.gnu.org/software/stow/), run:
 
-## Credits
+```sh
+cd ~/.dotfiles
+stow git homebrew mise ruby zed zsh
+```
 
-[http://iain.nl/2010/07/customizing-irb-2010-edition/](http://iain.nl/2010/07/customizing-irb-2010-edition/)
+## Oh My Zsh
 
+If you don't have Oh My Zsh installed, install it with:
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+## Personal Config
+
+Some configuration files contain sensitive or machine-specific information that you don't want to commit to your dotfiles repo. Examples include:
+
+- `~/.gitconfig.personal`: your personal Git name, email, and signing key
+- `~/.gitconfig.work`: your work Git name, email, and signing key
+- `~/.env.local`: API keys, secrets, and environment variables for your shell
+
+These files are useful because they keep your secrets and identity separate from your public dotfiles, making your setup portable and secure.
+
+After installation, run the provided `after-stow.sh` script to automatically copy example files for your personal config (if they don't already exist):
+
+    ~/.dotfiles/after-stow.sh
+
+Edit these files to add your real information and secrets as needed.

@@ -1,0 +1,11 @@
+# .gitconfig.work.example
+# Example Git config for work identity.
+# Copy this file to ~/.gitconfig.work and edit with your real info.
+
+[user]
+    name = Your Work Name
+    email = your.work.email@company.com
+
+# Add any work-specific Git settings below.
+# For example, signing key:
+# signingkey = YOUR-WORK-GPG-KEY-ID

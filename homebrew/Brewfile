@@ -1,0 +1,37 @@
+tap "homebrew/services"
+
+# Formulae
+brew "fzf"                     # Command-line fuzzy finder (used for git aliases)
+brew "git"                     # Distributed revision control system
+brew "mise"                    # Language version manager (like asdf)
+brew "starship"                # Cross-shell prompt written in Rust
+brew "stow"                    # Symlink manager for dotfiles
+brew "wget"                    # Internet file retriever
+
+# Casks
+cask "balenaetcher"            # USB/SD card writer
+cask "clipy"                   # Clipboard manager
+cask "licecap"                 # Animated GIF screen recorder
+cask "synology-drive"          # Synology NAS sync client
+cask "the-unarchiver"          # Archive extraction utility
+cask "zed"                     # Code editor
+
+cask "adguard"
+cask "docker"
+cask "dropbox"
+cask "font-fira-code"           # Standard Fira Code font
+cask "font-fira-code-nerd-font" # Patched Nerd Font (great with Starship)
+cask "google-chrome"
+cask "obsidian"
+cask "slack"
+cask "spotify"
+
+# QuickLook extensions
+cask "qlcolorcode"              # Preview source code files with syntax highlighting
+cask "qlmarkdown"               # Preview Markdown (.md) files in Finder
+cask "qlprettypatch"            # Preview .patch and .diff files in Finder
+cask "qlstephen"                # Preview plain text files without extensions in Finder
+cask "qlvideo"                  # Preview more video formats in Finder
+cask "quicklook-json"           # Preview JSON files with syntax highlighting in Finder
+cask "suspicious-package"       # Inspect .pkg installer contents in Finder
+cask "webpquicklook"            # Preview .webp images in Finder

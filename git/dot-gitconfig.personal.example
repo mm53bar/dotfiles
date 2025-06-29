@@ -1,0 +1,12 @@
+# Example .gitconfig.personal
+# Copy this file to ~/.gitconfig.personal and fill in your personal Git identity.
+# This file should NOT be committed to version control.
+
+[user]
+    name = Your Name
+    email = your.personal@email.com
+
+# Optionally add a GPG signing key
+# signingkey = YOUR-GPG-KEY-ID
+
+# Add any other personal Git settings below

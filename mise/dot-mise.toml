@@ -1,0 +1,5 @@
+[tools]
+ruby = "3.2.6"
+
+[settings.ruby]
+default_packages_file = "~/.default-gems"

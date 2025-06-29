@@ -1,0 +1,4 @@
+---
+BUNDLE_BUILD__MYSQL2: "--with-cppflags=-I/opt/homebrew/opt/openssl@3/include --with-ldflags=-L/opt/homebrew/opt/openssl@3/lib --with-mysql-lib-/opt/homebrew/opt/mysql/lib --with-mysql-dir=/opt/homebrew/opt/mysql --with-mysql-config=/opt/homebrew/opt/mysql/bin/mysql_config --with-mysql-include=/opt/homebrew/opt/mysql/include"
+BUNDLE_WITHOUT: "production:heroku"
+BUNDLE_PATH: "vendor/bundle"

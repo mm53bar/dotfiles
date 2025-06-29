@@ -1,0 +1,22 @@
+# ~/.env.local.example
+# Copy this file to ~/.env.local and fill in your secrets and environment variables.
+# This file should NOT be committed to version control.
+
+# AWS credentials
+# export AWS_ACCESS_KEY_ID=your-access-key-id
+# export AWS_SECRET_ACCESS_KEY=your-secret-access-key
+# export AWS_DEFAULT_REGION=us-east-1
+
+# GitHub token
+# export GITHUB_TOKEN=your-github-token
+
+# Database credentials
+# export DATABASE_URL=postgres://user:password@localhost:5432/dbname
+
+# Rails master key
+# export RAILS_MASTER_KEY=your-rails-master-key
+
+# Custom application secrets
+# export SECRET_KEY_BASE=your-secret-key-base
+
+# Add any other environment variables below

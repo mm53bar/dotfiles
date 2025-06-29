@@ -1,0 +1,111 @@
+{
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+  "context_servers": {
+    "rails-mcp-server": {
+      "source": "custom",
+      "command": {
+        "path": "rails-mcp-server",
+        "args": [],
+        "env": null
+      },
+      "settings": {}
+    }
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "language_models": {
+    "ollama": {
+      "low_speed_timeout_in_seconds": 30
+    }
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "tab_size": 2,
+  "theme": "Solarized Light",
+  "tabs": {
+    "git_status": true
+  },
+  "languages": {
+    "Markdown": {
+      "format_on_save": "on",
+      "soft_wrap": "editor_width"
+    },
+    "Ruby": {
+      "language_servers": ["solargraph"]
+    }
+  },
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": false
+      }
+    }
+  },
+  "agent": {
+    "default_profile": "write",
+    "profiles": {
+      "chat": {
+        "name": "Chat",
+        "tools": {
+          "contents": true,
+          "fetch": true,
+          "list_directory": true,
+          "open": true,
+          "read_file": true,
+          "thinking": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {}
+      },
+      "write": {
+        "name": "Write",
+        "tools": {
+          "code_actions": true,
+          "create_directory": true,
+          "rename": true,
+          "open": true,
+          "contents": true,
+          "terminal": true,
+          "batch_tool": true,
+          "code_symbols": true,
+          "copy_path": true,
+          "create_file": true,
+          "delete_path": true,
+          "diagnostics": true,
+          "edit_file": true,
+          "fetch": true,
+          "list_directory": true,
+          "move_path": true,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "grep": true,
+          "symbol_info": true,
+          "thinking": true
+        },
+        "enable_all_context_servers": true,
+        "context_servers": {}
+      }
+    },
+    "always_allow_tool_actions": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "version": "2"
+  }
+}
