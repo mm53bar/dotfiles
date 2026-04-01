@@ -3,3 +3,6 @@
 
 # Solargraph config
 .solargraph.yml
+
+# Claude Code local settings
+.claude/settings.local.json
