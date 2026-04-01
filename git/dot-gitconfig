@@ -22,6 +22,8 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   search = !git switch $(git branch | fzf)
   recent = !git switch $(git branch --sort=-committerdate | fzf)
+	nuke = !git reset --hard HEAD && git clean -fd
+	scrub = !git restore . && git clean -fd
 [include]
   path = .gitconfig.personal
 [includeIf "gitdir:~/src/work/"]

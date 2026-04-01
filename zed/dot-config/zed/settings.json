@@ -1,20 +1,22 @@
 {
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+  // Zed settings
+  //
+  // For information on how to configure Zed, see the Zed
+  // documentation: https://zed.dev/docs/configuring-zed
+  //
+  // To see all of Zed's default settings without changing your
+  // custom settings, run the `open default settings` command
+  // from the command palette or from `Zed` application menu.
   "context_servers": {
+    "mcp-server-exa-search": {
+      "enabled": true,
+      "settings": {}
+    },
     "rails-mcp-server": {
-      "source": "custom",
-      "command": {
-        "path": "rails-mcp-server",
-        "args": [],
-        "env": null
-      },
+      "enabled": true,
+      "command": "rails-mcp-server",
+      "args": [],
+      "env": null,
       "settings": {}
     }
   },
@@ -34,7 +36,7 @@
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "tab_size": 2,
-  "theme": "Solarized Light",
+  "theme": "One Light",
   "tabs": {
     "git_status": true
   },
@@ -104,8 +106,7 @@
     "always_allow_tool_actions": true,
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
-    "version": "2"
+      "model": "claude-sonnet-4.5"
+    }
   }
 }
